@@ -1,0 +1,6 @@
+{
+  "name": "Cement Bag Calculator",
+  "description": "Simple and mobile-friendly Cement Bag Calculator for Indian construction sites. Calculate cement bags, sand in CFT/Brass/Trolleys, aggregate, bricks, and total cost for Slab, Brickwork, Plaster, Columns, and Flooring.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
