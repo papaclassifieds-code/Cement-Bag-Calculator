@@ -26,6 +26,7 @@ import { FlooringForm } from './components/FlooringForm';
 import { IndianResultCard } from './components/IndianResultCard';
 import { RatesModal } from './components/RatesModal';
 import { TrolleyGuideModal } from './components/TrolleyGuideModal';
+import { OfflineIndicator } from './components/OfflineIndicator';
 
 export default function App() {
   // Navigation & Preferences
@@ -355,6 +356,9 @@ export default function App() {
         isOpen={isGuideOpen}
         onClose={() => setIsGuideOpen(false)}
       />
+
+      {/* Offline Mode Indicator */}
+      <OfflineIndicator />
     </div>
   );
 }

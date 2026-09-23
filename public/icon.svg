@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <rect width="512" height="512" rx="110" fill="#1c1917"/>
+  <rect x="24" y="24" width="464" height="464" rx="90" stroke="#f59e0b" stroke-width="6" opacity="0.3"/>
+  <g transform="translate(106, 96)">
+    <!-- Cement Bag Base -->
+    <path d="M40 70 L260 70 L280 290 C280 305 265 320 250 320 L50 320 C35 320 20 305 20 290 Z" fill="#292524" stroke="#f59e0b" stroke-width="12" stroke-linejoin="round"/>
+    <!-- Bag Top Fold -->
+    <path d="M30 70 L60 20 L240 20 L270 70 Z" fill="#f59e0b" stroke="#f59e0b" stroke-width="6" stroke-linejoin="round"/>
+    <line x1="70" y1="20" x2="80" y2="70" stroke="#1c1917" stroke-width="4"/>
+    <line x1="150" y1="20" x2="150" y2="70" stroke="#1c1917" stroke-width="4"/>
+    <line x1="230" y1="20" x2="220" y2="70" stroke="#1c1917" stroke-width="4"/>
+    
+    <!-- Central Badge -->
+    <rect x="65" y="110" width="170" height="150" rx="20" fill="#1c1917" stroke="#d97706" stroke-width="6"/>
+    <!-- Hindi "सी" / Calc Icon -->
+    <text x="150" y="195" font-family="Arial, sans-serif" font-size="78" font-weight="900" fill="#f59e0b" text-anchor="middle" dominant-baseline="middle">सी</text>
+    <text x="150" y="238" font-family="Arial, sans-serif" font-size="20" font-weight="800" fill="#fafaf9" text-anchor="middle" letter-spacing="1">CEMENT</text>
+  </g>
+</svg>

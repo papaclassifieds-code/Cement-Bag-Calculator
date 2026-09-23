@@ -54,9 +54,28 @@ _सीमेंट कैलकुलेटर (Indian Construction)_`;
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const handleWhatsApp = () => {
-    const text = encodeURIComponent(generateShareText());
-    window.open(`https://api.whatsapp.com/send?text=${text}`, '_blank');
+  const handleShare = async () => {
+    const rawText = generateShareText();
+    if (typeof navigator !== 'undefined' && navigator.share) {
+      try {
+        await navigator.share({
+          title: 'सामग्री का हिसाब (Cement Calculator)',
+          text: rawText,
+        });
+        return;
+      } catch (err: unknown) {
+        // User cancelled or share failed, fallback to whatsapp URL
+        if ((err as Error)?.name === 'AbortError') return;
+      }
+    }
+
+    const text = encodeURIComponent(rawText);
+    // Use whatsapp intent or direct api
+    window.location.href = `whatsapp://send?text=${text}`;
+    // Fallback if whatsapp scheme is not caught
+    setTimeout(() => {
+      window.open(`https://api.whatsapp.com/send?text=${text}`, '_blank');
+    }, 500);
   };
 
   const fmt = (num: number) => num.toLocaleString('en-IN');
@@ -226,11 +245,11 @@ _सीमेंट कैलकुलेटर (Indian Construction)_`;
         <div className="grid grid-cols-2 gap-2 pt-0.5">
           <button
             type="button"
-            onClick={handleWhatsApp}
+            onClick={handleShare}
             className="w-full py-2.5 px-3 bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 text-white rounded-xl font-bold text-xs flex items-center justify-center gap-2 shadow-2xs transition-colors"
           >
             <Share2 className="w-4 h-4" />
-            <span>व्हाट्सएप पर भेजें</span>
+            <span>शेयर / व्हाट्सएप</span>
           </button>
 
           <button

@@ -1,6 +1,7 @@
 import React from 'react';
 import { IndianUnit } from '../types';
-import { Sparkles, SlidersHorizontal, HelpCircle } from 'lucide-react';
+import { SlidersHorizontal, HelpCircle } from 'lucide-react';
+import { PWAInstallButton } from './PWAInstallButton';
 
 interface HeaderProps {
   unit: IndianUnit;
@@ -35,8 +36,10 @@ export const Header: React.FC<HeaderProps> = ({
           </div>
         </div>
 
-        {/* Action Controls: Unit Toggle & Settings */}
+        {/* Action Controls: Unit Toggle & Settings & PWA Install */}
         <div className="flex items-center gap-1.5">
+          <PWAInstallButton />
+
           {/* Feet / Meter Toggle */}
           <div className="bg-stone-800 p-0.5 rounded-lg border border-stone-700 flex items-center text-xs font-bold">
             <button
